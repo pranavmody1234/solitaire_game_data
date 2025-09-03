@@ -1,0 +1,50 @@
+file,column,description
+users.csv,user_id,Unique player id
+users.csv,install_date,Date of first install (YYYY-MM-DD)
+users.csv,country,Country (US-only)
+users.csv,state,US state code
+users.csv,os,Device OS (iOS/Android)
+users.csv,device_model,Device model string
+users.csv,channel,"Acquisition channel (e.g., Google UAC, ASA, etc.)"
+users.csv,campaign,Campaign name within channel
+users.csv,engagement_factor,Per-user engagement multiplier (0.3-2.0 approx)
+users.csv,base_time_spent_min,Typical minutes per active day for this user
+daily_metrics.csv,user_id,Unique player id
+daily_metrics.csv,date,Calendar date for activity
+daily_metrics.csv,day_since_install,Days since install (0=D0)
+daily_metrics.csv,active,1 if active this day
+daily_metrics.csv,time_spent_min,Minutes played this day
+daily_metrics.csv,interstitial_impressions,Interstitial ad impressions this day
+daily_metrics.csv,rewarded_impressions,Rewarded ad impressions this day
+daily_metrics.csv,ad_revenue_usd,Ad revenue attributed to this user-day
+daily_metrics.csv,iap_revenue_usd,IAP revenue attributed to this user-day
+level_events.csv,user_id,Unique player id
+level_events.csv,date,Calendar date of the event
+level_events.csv,level,Level number (1..100)
+level_events.csv,event,start/complete/fail/retry
+level_events.csv,moves,Number of moves in that attempt
+level_events.csv,booster_used,Whether booster was used on this attempt
+level_events.csv,success,True if level completed on that attempt
+churn_events.csv,user_id,Unique player id
+churn_events.csv,churn_date,Date of last activity for the user
+churn_events.csv,churn_day_since_install,Day since install when churn occurred
+churn_events.csv,last_level_reached,Highest level completed before churn
+churn_events.csv,reason,Categorized churn reason
+churn_events.csv,moves_in_last_session,Moves on the last recorded level attempt
+churn_events.csv,booster_used_last_session,If a booster was used in last session
+churn_events.csv,ad_watch_last_session,Total ads shown (all types) in last session
+churn_events.csv,time_spent_last_session_min,Minutes played in the last session
+campaign_retention_arpdau.csv,campaign,Campaign name
+campaign_retention_arpdau.csv,day_since_install,Days since install for cohort
+campaign_retention_arpdau.csv,active_users,DAU for that campaign-cohort day
+campaign_retention_arpdau.csv,ad_revenue,Total ad revenue for campaign-day
+campaign_retention_arpdau.csv,iap_revenue,Total IAP revenue for campaign-day
+campaign_retention_arpdau.csv,time_spent_min,Average minutes played for that day
+campaign_retention_arpdau.csv,installs,Total installs in campaign cohort
+campaign_retention_arpdau.csv,retention_rate,Active_users / Installs
+campaign_retention_arpdau.csv,arpdau,Revenue / Active_users
+ltv_predictions.csv,campaign,Campaign name
+ltv_predictions.csv,horizon_days,Prediction horizon (30/60/90/120/150/365)
+ltv_predictions.csv,ltv_pred_usd,Sum over d<=H of Retention(d)*ARPDAU(d)
+time_spent_by_day.csv,day_since_install,Day index 0..30
+time_spent_by_day.csv,avg_time_spent_min,Global average minutes for that day since install
